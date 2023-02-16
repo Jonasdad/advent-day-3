@@ -10,7 +10,13 @@ defmodule Advent do
     sumPrio(run(inputString, []))
 
   end
-  #run/2 returns a list of values that maps to each duplicate letter in each sub-string found in the map.
+#   run/2 Takes a list of strings and an (empty) value list
+#   Grabs the first element and puts each character as
+#   an element in the list.
+#   The string is divided into two strings and a matching
+#   character is found.
+#   Get the value from the map and run the function again
+#   without the first string.
   def run([], valuelist) do valuelist end
   def run(stringList, valueList) do
       map = %{a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, l: 12, m: 13, n: 14, o: 15,
